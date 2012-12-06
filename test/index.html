@@ -1,0 +1,54 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Mocha Spec Runner</title>
+  <link rel="stylesheet" href="lib/mocha/mocha.css">
+</head>
+<body>
+  <div id="mocha"></div>
+  <script src="lib/mocha/mocha.js"></script>
+  <script>
+  	mocha.setup({
+  		ui: 'bdd',
+			ignoreLeaks: true
+  	})
+  </script>
+  <script src="lib/chai.js"></script>
+  <script src="../src/namespacer.js"></script>
+
+	<script>
+		(function() {
+			expect = chai.expect
+
+			describe('Give it some context', function() {
+
+				it("creates a namespace", function () {
+					Namespacer('foo.bar.baz');
+					expect(window.foo).to.be.an('object');
+					expect(window.foo.bar.baz).to.be.an('object');
+				});
+
+				it("doesn't clober existing namespaces", function () {
+					window.foo.bar = {
+						a: 1
+					};
+					Namespacer('foo.bar.baz');
+					expect(window.foo.bar.a).to.eq(1);
+					expect(window.foo.bar.baz).to.be.an('object');
+				});
+
+				it("sets an object to the namespace if given", function () {
+					Namespacer('foo.bar.baz', {a: 1});
+					expect(window.foo.bar.baz.a).to.eq(1);
+				});
+
+			});
+		})();
+	</script>
+
+	<!-- trigger the mocha runner -->
+	<script src="runner/mocha.js"></script>
+
+</body>
+</html>
