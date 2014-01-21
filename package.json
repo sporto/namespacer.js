@@ -1,0 +1,33 @@
+{
+  "name": "namespacer.js",
+  "version": "0.5.0",
+  "description": "Utility for quick namespacing objects",
+  "main": "",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.4.0",
+    "gulp-jshint": "~1.3.4",
+    "jshint-stylish": "~0.1.5",
+    "gulp-uglify": "~0.1.0",
+    "mocha-browser": "~0.2.0",
+    "gulp-rename": "~0.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sporto/namespacer.js.git"
+  },
+  "keywords": [
+    "namespace"
+  ],
+  "author": "Sebastian Porto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sporto/namespacer.js/issues"
+  }
+}

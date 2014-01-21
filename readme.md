@@ -20,3 +20,19 @@ A simple library for creating namespaces in the browser
 ````
 
 Namespacer takes care of not replacing existing objects.
+
+Test
+----
+
+	npm install mocha-browser -g
+	mocha-browser test/index.html
+	
+	or
+
+	Open test/index.html in a browser
+
+Build
+-----
+
+	npm install gulp -g
+	gulp dist
