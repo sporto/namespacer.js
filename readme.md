@@ -5,18 +5,21 @@ A simple library for creating namespaces in the browser
 
 ```javascript
 
-	//create the namespace
+	// Create the namespace
 	Namespacer('foo.bar.baz')
 
-	//use the namespace
+	// Use the namespace
 	foo.bar.baz = {
 		a: 1
 	}
 
-	//or pass an object directly
+	// Pass an object directly
 	Namespacer('foo.bar.baz', {
 		a: 1
 	})''
+
+	// Retrieve an object from a namespace, if it doesn't exist it will just return an empty object
+	var a = Namespacer('foo.bar.baz');
 ````
 
 Namespacer takes care of not replacing existing objects.
@@ -24,15 +27,14 @@ Namespacer takes care of not replacing existing objects.
 Test
 ----
 
-	npm install mocha-browser -g
-	mocha-browser test/index.html
-	
-	or
-
 	Open test/index.html in a browser
+
+or
+
+	npm test
 
 Build
 -----
 
-	npm install gulp -g
+	npm install
 	gulp dist
