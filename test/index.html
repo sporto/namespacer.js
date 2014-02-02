@@ -64,13 +64,13 @@
 				});
 
 				it('returns the newly created object', function () {
-					var obj = {};
+					var obj = {a: 1};
 					var res = Namespacer('foo.bar.baz', obj);
 					expect(res).to.eq(obj);
 				});
 
 				it('returns an existing object', function () {
-					var obj = {};
+					var obj = {a: 1};
 					Namespacer('foo.bar.baz', obj);
 					var res = Namespacer('foo.bar.baz');
 					expect(res).to.eq(obj);
