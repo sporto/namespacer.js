@@ -24,9 +24,16 @@ A simple library for creating namespaces in the browser
 
 Namespacer takes care of not replacing existing objects.
 
+
+Install
+-------
+
+	npm install namespacerjs
+
 Test
 ----
 
+	webpack
 	Open test/index.html in a browser
 
 or
@@ -37,4 +44,4 @@ Build
 -----
 
 	npm install
-	gulp dist
+	webpack
