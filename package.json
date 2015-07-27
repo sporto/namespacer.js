@@ -1,6 +1,6 @@
 {
   "name": "namespacerjs",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Utility for quick namespacing objects",
   "main": "src/namespacer.js",
   "directories": {
